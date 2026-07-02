@@ -110,7 +110,9 @@ const goToSection = (id) => {
 const openMap = () => {
   window.open('https://yandex.ru/maps/63/irkutsk/', '_blank')
 }
-
+const getCardsByCategory = (category) => {
+  return filteredCards.value.filter(card => card.category === category)
+}
 const filteredCards = computed(() => {
   return cards.value.filter(card => {
     const searchText = searchQuery.value.toLowerCase().trim()
